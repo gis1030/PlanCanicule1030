@@ -69,7 +69,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[50.84242805691727,4.35343370855978],[50.88164566987217,4.4308537948872715]]);
+        }).fitBounds([[50.84247161968877,4.35560315991008],[50.88242969825382,4.434485710965061]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -150,7 +150,6 @@
             maxNativeZoom: 18
         });
         layer_GoogleSatellite_0;
-        map.addLayer(layer_GoogleSatellite_0);
         map.createPane('pane_GoogleTerrain_1');
         map.getPane('pane_GoogleTerrain_1').style.zIndex = 401;
         var layer_GoogleTerrain_1 = L.tileLayer('http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}', {
@@ -1070,7 +1069,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/fontainesdeaupotablesurSchaerbeeketSaintJosse_12.svg',
-            iconSize: [15.2, 15.2]
+            iconSize: [38.0, 38.0]
         }),
                 interactive: true,
             }
@@ -1169,7 +1168,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/fontainesetautrespointsdeau_13.svg',
-            iconSize: [15.2, 15.2]
+            iconSize: [38.0, 38.0]
         }),
                 interactive: true,
             }
@@ -1258,7 +1257,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/ruesfortementarbores_14.svg',
-            iconSize: [15.2, 15.2]
+            iconSize: [38.0, 38.0]
         }),
                 interactive: true,
             }
@@ -1357,7 +1356,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/parcsetdessquares_15.svg',
-            iconSize: [15.2, 15.2]
+            iconSize: [38.0, 38.0]
         }),
                 interactive: true,
             }
@@ -1450,10 +1449,10 @@
             {label: '<img src="legend/voies_6.png" /> voies', layer: layer_voies_6},
             {label: '<img src="legend/ruesfortementarbores_5.png" /> rues fortement arborées', layer: layer_ruesfortementarbores_5},
             {label: '<img src="legend/zonescyclables_4.png" /> zones cyclables', layer: layer_zonescyclables_4},]},
-        {label: '<b>schaerbeek</b>',  selectAllCheckbox: true, children: [
+        {label: '<b>schaerbeek</b>', collapsed: true, selectAllCheckbox: true, children: [
             {label: '<img src="legend/limitesschaerbeek_3.png" /> limites schaerbeek', layer: layer_limitesschaerbeek_3},
             {label: '<img src="legend/quartiers1030_2.png" /> quartiers 1030', layer: layer_quartiers1030_2},]},
-        {label: '<b>Tiles</b>',  selectAllCheckbox: true, children: [
+        {label: '<b>Tiles</b>', collapsed: true, selectAllCheckbox: true, children: [
             {label: "Google Terrain", layer: layer_GoogleTerrain_1},
             {label: "Google Satellite", layer: layer_GoogleSatellite_0},]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
