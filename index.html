@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+    <title>DSI Schaerbeek</title>
+    <link rel="shortcut icon" href="css/images/ih2.ico" type="image/x-icon">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
@@ -22,8 +24,69 @@
         <title>Plan Canicule de la Commune de Schaerbeek</title>
     </head>
     <body>
-        <div id="map">
+    <div id="Region00">
+       <div id="Region04">
+           <div id="map"></div>
+       </div>
+    </div>
+	
+        <div id="Region01">
+            <div class="container">
+				<div class="sidebar">
+				  <h1>
+					<div class="logo"></div>
+					<span>Plan Canicule de la Commune de Schaerbeek</span>
+				  </h1>
+
+				  <div class="data-infos">
+					<p>
+					  Il comprend des mesures de prévention, d'information et d\'assistance, 
+					  avec un accent particulier sur les personnes isolées ou en situation de précarité.
+					</p>
+					<p>
+					  Pour plus d’information n’hésitez pas à contacter notre centrale
+					  d’appel au 0800 939 88.
+					</p>
+					<p></p>
+					<p>
+					  1. Inscription des personnes vulnérables:
+					Possibilité de s'inscrire sur un registre pour bénéficier d'un suivi téléphonique régulier pendant les périodes de fortes chaleurs.
+					</p>
+					<p>
+					  2. Visites à domicile: 
+					  Des équipes peuvent se rendre au domicile des personnes inscrites pour s'assurer de leur bien-être et donner des conseils.
+					</p>
+					<p>
+					  3. Identification des lieux de fraîcheur:
+					  Cartographie des îlots de fraîcheur et rappel des points d'eau et des fontaines publiques. 
+					</p>
+					<p>
+					  4. Prise en charge des urgences:
+					  En cas de symptômes liés à la chaleur, il est recommandé de contacter son médecin traitant ou de faire le 112. 
+					</p>
+					<p>
+					  5. Numéro d'appel gratuit:
+					  Un numéro dédié (0800 35 446) permet de signaler toute personne isolée ou susceptible d'avoir besoin d'aide en cas de canicule. 
+					</p>
+					
+					<p>
+					<div class="logo3"></div>
+					</p>
+				  </div>
+				</div>
+				
+
+				<!--
+				<div class="credits">
+				  <p>
+					Commune de Schaerbeek©<a href="https://www.1030.be/">Commune de Schaerbeek</a>
+				  </p>
+				</div>
+				-->
+				
+            </div>
         </div>
+		
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
@@ -131,7 +194,7 @@
                 this._div.classList.add("abstractUncollapsed");
                 this._div.innerHTML = 'Le "plan canicule" communal à Schaerbeek est une démarche proactive que vise à protéger les habitants, notamment les plus vulnérables, pendant les périodes de fortes chaleurs.<br />Il comprend des mesures de prévention, d\'information et d\'assistance, avec un accent particulier sur les personnes isolées ou en situation de précarité. <br /><br />Inscription des personnes vulnérables:<br />Possibilité de s\'inscrire sur un registre pour bénéficier d\'un suivi téléphonique régulier pendant les périodes de fortes chaleurs. <br /><br />Visites à domicile:<br />Des équipes peuvent se rendre au domicile des personnes inscrites pour s\'assurer de leur bien-être et donner des conseils. <br /><br />Identification des lieux de fraîcheur:<br />Cartographie des îlots de fraîcheur et rappel des points d\'eau et des fontaines publiques. <br />Prise en charge des urgences:<br />En cas de symptômes liés à la chaleur, il est recommandé de contacter son médecin traitant ou de faire le 112. <br /><br />Numéro d\'appel gratuit:<br />Un numéro dédié (0800 35 446) permet de signaler toute personne isolée ou susceptible d\'avoir besoin d\'aide en cas de canicule. ';
         };
-        abstract.addTo(map);
+        //abstract.addTo(map);
         var zoomControl = L.control.zoom({
             position: 'topleft'
         }).addTo(map);
@@ -270,7 +333,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 4.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,1.0)',
@@ -1449,12 +1512,14 @@
             {label: '<img src="legend/voies_6.png" /> voies', layer: layer_voies_6},
             {label: '<img src="legend/ruesfortementarbores_5.png" /> rues fortement arborées', layer: layer_ruesfortementarbores_5},
             {label: '<img src="legend/zonescyclables_4.png" /> zones cyclables', layer: layer_zonescyclables_4},]},
-        {label: '<b>schaerbeek</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: '<img src="legend/limitesschaerbeek_3.png" /> limites schaerbeek', layer: layer_limitesschaerbeek_3},
-            {label: '<img src="legend/quartiers1030_2.png" /> quartiers 1030', layer: layer_quartiers1030_2},]},
-        {label: '<b>Tiles</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "Google Terrain", layer: layer_GoogleTerrain_1},
-            {label: "Google Satellite", layer: layer_GoogleSatellite_0},]},]
+
+		{label: '<b>schaerbeek</b>',  children: [
+            {label: '<img src="legend/limitesschaerbeek_3.png" /> limites schaerbeek', layer: layer_limitesschaerbeek_3, radioGroup: 'bd'},
+            {label: '<img src="legend/quartiers1030_2.png" /> quartiers 1030', layer: layer_quartiers1030_2, radioGroup: 'bd'},]},
+        
+            {label: "Google Terrain", layer: layer_GoogleTerrain_1, radioGroup: 'bm' },
+            {label: "Google Satellite", layer: layer_GoogleSatellite_0, radioGroup: 'bm' },]
+			
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
