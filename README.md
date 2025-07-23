@@ -21,5 +21,5 @@ A dedicated number (0800 35 446) allows you to report anyone who is isolated or 
 ## Data:
 The database exploited comes mainly from the Datastore.brussels (https://datastore.brussels/web/)  and information from the municipality of Scharbeek (https://www.1030.be).
 
-## Last updated:
-18/07/2025
+### Last updated:
+23/07/2025
