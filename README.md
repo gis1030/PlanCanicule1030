@@ -6,19 +6,19 @@ with a particular focus on people who are isolated or in precarious situations.
 ## Link:
 https://gis1030.github.io/PlanCanicule1030/#14/50.8625/4.3950
 
-### Registration of vulnerable people:
+## Registration of vulnerable people:
 It is possible to register to benefit from regular telephone support during periods of extreme heat.
 
-### Home visits:
+## Home visits:
 Teams can visit the homes of registered individuals to ensure their well-being and provide advice.
 
-### Identification of cool spots:
+## Identification of cool spots:
 Mapping of cool spots and reminders of water points and public fountains.
 
-### Emergency management:
+## Emergency management:
 In case of heat-related symptoms, it is recommended to contact your doctor or call 112.
 
-### Call-free number:
+## Call-free number:
 A dedicated number (0800 35 446) allows you to report anyone who is isolated or may need help during a heatwave.
 
 ## Data:
