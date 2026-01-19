@@ -3,6 +3,9 @@ The  "plan canicule communal" in Schaerbeek is a proactive approach aimed at pro
 It includes prevention, information, and assistance measures,
 with a particular focus on people who are isolated or in precarious situations.
 
+## Link:
+https://gis1030.github.io/PlanCanicule1030/#14/50.8625/4.3950
+
 ### Registration of vulnerable people:
 It is possible to register to benefit from regular telephone support during periods of extreme heat.
 
